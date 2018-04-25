@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Creative - DC Comics Theme</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/creative.min.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">DC Comics</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#introducción">introducción</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#Visualización 2">Visualización 1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#esto">Visualización 2</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Visualización 3</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="masthead text-center text-white d-flex">
+      <div class="container my-auto">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <h1 class="text-uppercase">
+              <strong>DC COMICS</strong>
+            </h1>
+            <hr>
+          </div>
+          <div class="col-lg-8 mx-auto">
+            <p class="text-faded mb-5">En esta página podrás encontrar información de algunos personajes principales de Dc Comics</p>
+            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#introducción">Find Out More</a>
+            
+
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="bg-primary" id="introducción">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading text-white">Una breve reseña</h2>
+            <hr class="light my-4">
+            <p class="text-faded mb-4">DC Comics es una editorial de cómics estadounidense. Forma parte de DC Entertainment, una de las empresas que conforman Warner Bros. Entertainment, la cual a su vez es propiedad de Time Warner. Fue fundada en 1934 bajo el nombre National Allied Publications, para luego tomar el nombre de DC Comics en 1937. Las iniciales «DC» son una abreviatura de Detective Comics, uno de los primeros títulos emblemáticos de la compañía.</p>
+          
+            <a class="btn btn-light btn-xl js-scroll-trigger" href="#visualuno">Get Started!</a>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+<!--<section id="visualuno">
+<div class="container">
+<div class="row">
+<div class="col-lg-12 text-center">
+            <h2 class="section-heading">Logo de Batman</h2>
+            <hr class="my-4"> -->
+
+<!--biblioteca p5-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.dom.min.js"></script>
+
+<script>
+
+var img;
+var smallPoint, largePoint;
+
+function preload() {
+  img = loadImage("https://images-na.ssl-images-amazon.com/images/I/61Yobtd1YUL._SX355_.jpg");
+}
+
+function setup() {
+
+  createCanvas(500, 250);
+  smallPoint = 1;
+  largePoint = 30;
+  imageMode(CENTER);
+  noStroke();
+  background(240);
+  img.loadPixels();
+}
+
+function draw() {
+  var pointillize = map(mouseX, 0, width, smallPoint, largePoint);
+  var x = floor(random(img.width));
+  var y = floor(random(img.height));
+  var pix = img.get(x, y);
+  fill(pix, 50);
+  ellipse(x, y, pointillize, pointillize);
+}
+
+</script>
+
+          </div>
+        </div>
+        </div>
+      
+
+    </section>
+    <section class="p-0" id="Visualización 2">
+      <p> A continuación se muestra una visualización de las ventas de comics de las principales empresas el año 2015.
+      (fuente:https://www.cinepremiere.com.mx/56996-marvel-vence-a-dc-en-ventas-de-comics-en-2015.html) </p>
+      <div id="here" class="my-4"></div>
+            </div>
+            <script src="https://d3js.org/d3.v5.min.js"></script>
+<script>
+
+   var w = 1340, h = 500, radius = 250;
+   
+   var calculo = [
+      {name: 'Marvel Comics', count: 38, color: '#a80316'},
+      {name: 'DC Comics', count: 25, color: '#000a7f'},
+      {name: 'Image Comics', count: 10, color: '#a1aac4'},
+      {name: 'IDW', count: 4, color: '#878ea3'},
+      {name: 'Dark Horse Comics', count: 3, color: '#797d89'},
+    ];
+    
+    var arc = d3.arc().outerRadius(radius - 50).innerRadius(100);
+    
+    var pie = d3.pie().sort(null).value(function(d) { return d.count; });
+
+    var svg = d3.select('#here').append("svg")
+      .attr("width", w)
+      .attr("height", h)
+      .style("background","#494e5b")
+      .append("g")
+      .attr("transform", "translate(" + w/2 + "," + h/2 + ")");
+//pie me hace el cálculo autómatico del porcentaje que ocupa cada dato dentro del pie
+    var g = svg.selectAll(".arc")
+      .data(pie(calculo))
+      .enter().append("g");    
+    
+    g.append("path")
+      .attr("d", arc)
+      .style("fill", function(d,i) { return d.data.color; });
+    
+    g.append("text")
+      .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
+      .style("text-anchor", "middle")
+      .text(function(d) { return d.data.name; })
+      .attr("fill","white")
+      .style("font-size","11px")
+
+</script>
+
+
+    </section>
+
+
+    <section id="esto">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">Personaje Favorito</h2>
+            <hr class="my-4">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSvc-q-DD7jC4VeDzU_H9329fWtnJkh-omVn5Rd774zJMYpPolcg">
+
+
+          </div>
+        </div>
+      </div>
+<div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">At Your Service</h2>
+            <hr class="my-4">
+          </div>
+        </div>
+      </div>
+<div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="last">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+  <h4>Estos son <span id="numero"></span> personajes principales de DC:</h4>  
+    <ul id="ultima">
+    </ul>
+          </div>
+        </div>
+      </div>
+<div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/creative.min.js"></script>
+
+    <script src="lista.js"></script>
+    <script src="personajes.js"></script>
+
+
+  </body>
+
+</html>
